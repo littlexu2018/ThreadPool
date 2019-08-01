@@ -19,7 +19,7 @@ public class FixThreadPool {
 			executorService.execute(new Runnable() {
 				@Override
 				public void run() {
-					System.out.println("i:"+index);
+					System.out.println("i:"+index+" 当前线程的名称："+Thread.currentThread().getName());
 					try {
 						Thread.sleep(3000);
 					} catch (InterruptedException e) {

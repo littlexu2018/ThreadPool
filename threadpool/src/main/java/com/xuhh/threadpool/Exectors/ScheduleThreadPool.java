@@ -15,7 +15,7 @@ public class ScheduleThreadPool {
 		ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(5);
 		scheduledThreadPool.scheduleAtFixedRate(new Runnable() {
 			public void run() {
-				System.out.println("delay 1 seconds, and excute every 3 seconds");
+				System.out.println("delay 1 seconds, and excute every 3 seconds"+" 当前线程的名称："+Thread.currentThread().getName());
 			}
 		}, 1, 3, TimeUnit.SECONDS);
 	}

@@ -20,7 +20,7 @@ public class SingleThreadPool {
 			singleThreadExecutor.execute(new Runnable() {
 				public void run() {
 					try {
-						System.out.println(index);
+						System.out.println(index+" 当前线程的名称："+Thread.currentThread().getName());
 						Thread.sleep(2000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
